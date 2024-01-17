@@ -1,0 +1,138 @@
+@font-face {
+    /* 애플산돌고딕 폰트 적용 */
+    font-family: 'Pretendard-700';
+    src: url("../font/Pretendard-700.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    /* 애플산돌고딕 폰트 적용 */
+    font-family: 'Pretendard-400';
+    src: url("../font/Pretendard-400.ttf") format("truetype");
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%; /* 이미지가 컨테이너를 넘지 않도록 설정 */
+    height: auto; /* 이미지 비율 유지 */
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #000
+}
+.download-btn {
+    width: 140px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #d97652;
+    font-family: 'Pretendard-700', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    border: none;
+}
+/* 상단 CSS 시작 */
+.top-background {
+    position: relative;
+    top: 2px;
+    height: 900px;
+    background-color: #f2e9d8;
+}
+
+.top-nav-bar {
+    position: relative;
+    top: 2px;
+    height: 102px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 15.9%;
+    gap: 48px;
+    justify-items: end;
+}
+.logo{
+    margin-left: 17px;
+}
+.top-nav-bar nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-family: 'Pretendard-400', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    list-style: none;
+}
+
+.top-background-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: -13.2px 16.8%;
+    justify-items: end;
+    align-items: center;
+}
+
+.top-text-button-content {
+    display: grid;
+    grid-row-gap: 40.3px;
+}
+
+.top-maintitle {
+    font-family: 'Pretendard-700', sans-serif;
+    font-size: 48px;
+    line-height: 60px;
+    width: max-content;
+}
+
+.top-subtitle {
+    font-family: 'Pretendard-400', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 4.9px;
+}
+
+.top-background-main figure {
+    position: relative;
+    top: 6%;
+    right: -17px;
+}
+/* middle start */
+
+.upper-middle-main {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 8.4% 16.8%;
+    justify-content: space-between;
+}
+
+.upper-middle-main figure img {
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.um-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 18px;
+}
+
+.um-maintitle{
+font-family: 'Pretendard-700', sans-serif;
+font-size: 36px;
+line-height: 45px;
+}
+.um-subtitle{
+font-family: 'Pretendard-400', sans-serif;
+font-size: 16px;
+line-height: 20px;
+}
