@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hodu자랑페이지</title>
+    <link rel="stylesheet" href="./css/hodu.css">
+</head>
+<body>
+<div class="top-background">
+    <header class="top-nav-bar">
+        <div class="logo">
+            <a href="./hodu-project.html">
+                <img src="media/img/logo.png" alt="로고">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+        <button class="btn-layout">Download</button>
+    </header>
+    <section class="top-background-main">
+        <div class="top-text-button-content">
+            <h1 class="big-title">
+                Lorem Ipsum is simply<br>dummy text of the printing and
+            </h1>
+            <p class="top-subtitle">
+                Lorem Ipsum is simply dummy text of the printing and<br>typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text<br> ever since the 1500s, when an unknown
+            </p>
+            <button class="btn-layout">Download</button>
+        </div>
+        <figure>
+            <img src="media/img/cat9.png" alt="고양이가 박스를 쓰고 장난치는 모습">
+        </figure>
+    </section>
+</div>
+<main>
+    <div class="upper-middle-main">
+        <figure>
+            <img src="media/img/cat7.png" alt="이불에 누워서 쳐다보는 고양이"/>
+        </figure>
+        <section class="um-text-content">
+            <h2 class="main-title">Lorem Ipsum is simply<br> dummy text of the printing<br> and dummy text</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting<br>industry.</p>
+        </section>
+    </div>
+    <section>
+        <div class="gallery-text-content">
+            <h2 class="big-title">dummy text of the printing and dummy</h2>
+            <p class="gallery-subtitle">Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting
+            industry.<br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,when an unknown</p>
+        </div>
+    </section>
+    <section class="gallery">
+        <article>
+            <img src="media/img/cat6.png" alt="캣타워에 올라가있는 고양이">
+            <img src="media/img/cat4.png" alt="벽을 보며 생각에 잠긴 고양이">
+            <img src="media/img/cat2.png" alt="날 왜 불렀냐는 표정의 고양이">
+        </article>
+        <article>
+            <img src="media/img/cat5.png" alt="눈맞춤 하는 고양이">
+            <img src="media/img/cat3.png" alt="밥먹고 싶은 표정의 고양이">
+            <img src="media/img/cat1.png" alt="하품하는 고양이">
+        </article>
+    </section>
+    <section class="show-more-ground">
+        <article>
+        </article>
+    </section>
+    <section class="gallery-show-more">
+        <p class="gallery-mini-title">Continue exploring HODU</p>
+        <button class="btn-layout">Show more</button>
+    </section>
+    <hr>
+    <section class="mapinfo-content">
+        <h2 class="main-title">Where you'll be</h2>
+        <address class="mapinfo-address">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</address>
+        <figure class="map-container">
+            <div class="map_wrap">
+                <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+                <!-- 지도타입 컨트롤 div 입니다 -->
+                <div class="custom_typecontrol radius_border">
+                    <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+                    <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+                </div>
+                <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                <div class="custom_zoomcontrol radius_border">
+                    <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>
+                    <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+                </div>
+            </div>
+            <figcaption class="visually-hidden">Interactive map showing the location at 330, Cheomdan-ro, Jeju-si,
+                                                Jeju-do, Republic of Korea.
+            </figcaption>
+        </figure>
+    </section>
+    <section class="blog-subscribe-content">
+        <div class="blog-text-content">
+            <h2 class="main-title">Subscribe to our Blog post</h2>
+            <p class="sub-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                                     Lorem Ipsum has been the industry's standard dummy text </p>
+        </div>
+        <form class="subscribe-form">
+            <label for="email-input" class="visually-hidden">Email Address</label>
+            <input type="email" id="email-input" name="email" placeholder="Enter your e-mail address" required>
+            <button class="btn-layout" id="subscribe-btn" aria-label="Subscribe to blogpost">Subscribe</button>
+        </form>
+    </section>
+</main>
+<div class="modal-overlay"></div>
+<div class="cat-modal" aria-hidden="true">
+    <div class="modal-content">
+        <img src="media/img/modalCat.png" alt="mascote HODU">
+        <span class="main-title">Thank you!</span>
+        <p class="sub-title">Lorem Ipsum is simply dummy text of the printing industry.</p>
+        <button class="btn-layout" id="close-modal" aria-label="Close modal">OK! I Love HODU</button>
+    </div>
+</div>
+<div class="divider-background">
+    <a href="#" class="scroll-top-btn" aria-label="Go to top"></a>
+</div>
+<footer>
+    <section class="footer-content">
+        <figure class="footer-logo">
+            <img src="media/img/logo.png" alt="mascote HODU logo"/>
+        </figure>
+        <nav>
+            <ul class="social-media">
+                <li><a href="https://blog.naver.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="NaverBlog"><img src="media/img/icon-blog.png" alt="NaverBlog"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Instagram"><img src="media/img/icon-insta.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Facebook"><img src="media/img/icon-facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"
+                       aria-label="Youtube"><img src="media/img/icon-youtube.png" alt="Youtube"></a></li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+<div class="progress-bar">
+    <div class="progress-bar-fill"></div>
+</div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5eedfce732f68e6572878c29868c6e29"></script>
+<script src="./js/hodu.js"></script>
+</body>
+</html>

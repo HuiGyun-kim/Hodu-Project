@@ -1,12 +1,18 @@
+/* 공통 사용 CSS 시작 */
+
 @font-face {
-    /* 애플산돌고딕 폰트 적용 */
     font-family: 'Pretendard-700';
     src: url("../font/Pretendard-700.ttf") format("truetype");
     font-weight: normal;
 }
 
 @font-face {
-    /* 애플산돌고딕 폰트 적용 */
+    font-family: 'Pretendard-500';
+    src: url("../font/Pretendard-500.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
     font-family: 'Pretendard-400';
     src: url("../font/Pretendard-400.ttf") format("truetype");
     font-weight: normal;
@@ -15,20 +21,45 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Pretendard-400', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 img {
-    width: 100%; /* 이미지가 컨테이너를 넘지 않도록 설정 */
-    height: auto; /* 이미지 비율 유지 */
+    width: 100%;
+    height: auto;
     vertical-align: bottom;
 }
 
 a {
-    text-decoration: none; /* 링크 밑줄 제거 */
+    text-decoration: none;
     color: #000
 }
-.download-btn {
+
+.big-title {
+    font-family: 'Pretendard-700', sans-serif;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.main-title {
+    font-family: 'Pretendard-700', sans-serif;
+    font-size: 36px;
+    line-height: 45px;
+}
+
+.sub-title {
+    font-family: 'Pretendard-400', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.btn-layout {
     width: 140px;
     height: 50px;
     border-radius: 40px;
@@ -38,8 +69,124 @@ a {
     line-height: 20px;
     color: #fff;
     border: none;
+    transition: background-color 0.3s ease;
 }
-/* 상단 CSS 시작 */
+
+.btn-layout:hover {
+    cursor: pointer;
+    background-color: hsl(15, 84%, 69%);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 지도 스타일 시작*/
+
+.map_wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+}
+
+.radius_border {
+    border: 1px solid #919191;
+    border-radius: 5px;
+}
+
+.custom_typecontrol {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: 130px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    font-size: 12px;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+
+.custom_typecontrol span {
+    display: block;
+    width: 65px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.custom_typecontrol .btn {
+    background: #fff;
+    background: linear-gradient(#fff, #e6e6e6);
+}
+
+.custom_typecontrol .btn:hover {
+    background: #f5f5f5;
+    background: linear-gradient(#f5f5f5, #e3e3e3);
+}
+
+.custom_typecontrol .btn:active {
+    background: #e6e6e6;
+    background: linear-gradient(#e6e6e6, #fff);
+}
+
+.custom_typecontrol .selected_btn {
+    color: #fff;
+    background: #425470;
+    background: linear-gradient(#425470, #5b6d8a);
+}
+
+.custom_typecontrol .selected_btn:hover {
+    color: #fff;
+}
+
+.custom_zoomcontrol {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 36px;
+    height: 80px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+
+.custom_zoomcontrol span {
+    display: block;
+    width: 36px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.custom_zoomcontrol span img {
+    width: 15px;
+    height: 15px;
+    padding: 12px 0;
+    border: none;
+}
+
+.custom_zoomcontrol span:first-child {
+    border-bottom: 1px solid #bfbfbf;
+}
+
+/*지도 스타일 끝*/
+
+/* 공통 사용 CSS 끝 */
+
+/* 상단부 CSS 시작 */
+
 .top-background {
     position: relative;
     top: 2px;
@@ -58,16 +205,14 @@ a {
     gap: 48px;
     justify-items: end;
 }
-.logo{
+
+.logo {
     margin-left: 17px;
 }
+
 .top-nav-bar nav ul {
     display: flex;
-    justify-content: space-between;
     gap: 30px;
-    font-family: 'Pretendard-400', sans-serif;
-    font-size: 16px;
-    line-height: 20px;
     list-style: none;
 }
 
@@ -85,32 +230,34 @@ a {
     grid-row-gap: 40.3px;
 }
 
-.top-maintitle {
-    font-family: 'Pretendard-700', sans-serif;
-    font-size: 48px;
-    line-height: 60px;
+.top-text-button-content .big-title {
     width: max-content;
 }
 
 .top-subtitle {
-    font-family: 'Pretendard-400', sans-serif;
-    font-size: 16px;
-    line-height: 20px;
     margin-bottom: 4.9px;
 }
 
 .top-background-main figure {
     position: relative;
-    top: 6%;
+    top: 6.1%;
     right: -17px;
 }
-/* middle start */
+
+/* 상단부 CSS 끝 */
+
+
+/* 중단부 CSS 시작 */
+
+main {
+    margin: -0.70% 16.8%;
+    margin-right: 16%;
+}
 
 .upper-middle-main {
     display: flex;
-    justify-items: center;
     align-items: center;
-    margin: 8.4% 16.8%;
+    margin: 13.55% 0%;
     justify-content: space-between;
 }
 
@@ -123,16 +270,312 @@ a {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-right: 18px;
+    margin-right: 33px;
 }
 
-.um-maintitle{
-font-family: 'Pretendard-700', sans-serif;
-font-size: 36px;
-line-height: 45px;
+.gallery-text-content {
+    text-align: center;
+    display: grid;
+    gap: 40px;
+    margin-top: -53px;
+    margin-left: 10px;
 }
-.um-subtitle{
-font-family: 'Pretendard-400', sans-serif;
-font-size: 16px;
-line-height: 20px;
+
+.gallery-text-content .big-title {
+    color: #d97652;
 }
+
+.gallery-subtitle {
+    margin-left: 9px;
+}
+
+.gallery-subtitle span {
+    font-family: 'Pretendard-700', sans-serif;
+    color: #d97652;
+}
+
+.gallery {
+    display: grid;
+    gap: 72px;
+    margin: 6.99% 0;
+}
+
+.gallery article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 72px;
+}
+
+.gallery img {
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.gallery img:hover, .show-more-ground img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.show-more-ground article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 72px;
+}
+
+.show-more-ground img {
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-show-more {
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.85%;
+}
+
+.gallery-mini-title {
+    font-family: 'Pretendard-700', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.gallery-show-more .btn-layout {
+    width: 143px;
+}
+
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background-image: url("../media/img/track.png");
+    background-repeat: no-repeat;
+    background-size: 100% 45px;
+    z-index: 9999;
+}
+
+.progress-bar.hidden{
+    display: none;
+}
+.progress-bar-fill {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-image: url('../media/img/cat.gif');
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    padding-left: 45px;
+}
+
+hr {
+    height: 1px;
+    color: #c4c4c4;
+    width: 100%;
+    margin: 6.25% auto;
+}
+
+.mapinfo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    margin-bottom: 75px;
+}
+
+.mapinfo-content .main-title {
+    margin-top: -14px;
+}
+
+.mapinfo-address {
+    font-family: 'Pretendard-500', sans-serif;
+    color: #606367;
+    font-style: normal;
+    margin-top: -26px;
+}
+
+.map-container {
+    margin-top: 2px;
+}
+
+#map {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 520px;
+    border-radius: 12px;
+}
+
+.blog-subscribe-content {
+    border-radius: 30px;
+    background-color: #263140;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: -8%;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 7.9% 47px 7.9% 0;
+}
+
+.blog-text-content .main-title {
+    color: #fff;
+}
+
+.blog-text-content .sub-title {
+    color: #f2e9d8;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 83.6%;
+}
+
+#email-input {
+    flex-grow: 1;
+    margin-right: -6px;
+    padding-left: 64px;
+    border-radius: 60px;
+    height: 60px;
+}
+
+.subscribe-form input[placeholder] {
+    font-family: 'Pretendard-400', sans-serif;
+    font-size: 16px;
+}
+
+.subscribe-form::before {
+    content: url('../media/img/mail.png');
+    position: absolute;
+    left: 29px;
+    top: 53%;
+    transform: translateY(-50%);
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    border-radius: 30px;
+}
+
+.cat-modal {
+    display: none;
+    position: fixed;
+    border-radius: 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('../media/img/modal.png');
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+.cat-modal.active {
+    display: block;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.modal-overlay.active {
+    display: block;
+}
+
+.modal-content {
+    display: grid;
+    width: 600px;
+    height: 400px;
+    justify-items: center;
+    align-content: space-around;
+}
+
+.modal-content img {
+    width: auto;
+    margin-top: 43px;
+    margin-bottom: -10px;
+}
+
+.modal-content span {
+    color: #d97652;
+    margin-top: -1px;
+}
+
+.modal-content .sub-title {
+    margin-top: -21px;
+}
+
+#close-modal {
+    width: 183px;
+    margin-bottom: 23px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.divider-background {
+    position: relative;
+    background-image: url('../media/img/cat8.png');
+    background-position: center;
+    height: 340px;
+    margin-top: 3px;
+    width: 100.894%;
+}
+
+.scroll-top-btn {
+    width: 50px;
+    height: 50px;
+    background-image: url('../media/img/scroll-top-btn-gray.png');
+    position: absolute;
+    right: 42px;
+    bottom: 19px;
+}
+
+.scroll-top-btn:hover,
+.scroll-top-btn:focus {
+    background-image: url('../media/img/scroll-top-btn-darkgray.png');
+}
+
+/* 중단부 CSS 끝 */
+
+/* 하단부 CSS 시작 */
+
+footer {
+    margin: -0.70% 16.8%;
+    margin-right: 16%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    margin-top: 14px;
+}
+
+.social-media {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-right: -1px;
+}
+
+/* 하단부 CSS 끝 */
+
